@@ -1,0 +1,27 @@
+.array-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-left: 100px;
+}
+
+.array-container-bars {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  /* left: 100px; */
+}
+
+.array-container-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 0 100px;
+}
+
+.array-bar {
+  width: 20px;
+  background-color: turquoise;
+  margin: 0 1px;
+  display: inline-block;
+}
