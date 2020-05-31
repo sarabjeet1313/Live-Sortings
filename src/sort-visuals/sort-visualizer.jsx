@@ -3,6 +3,7 @@ import "./sort-visualizer.css";
 import {
   getMergeSortAnimations,
   getBubbleSortAnimations,
+  getQuickSortAnimations,
 } from "../sortingAlgorithms/sortingAlgorithms.js";
 
 const NUMBER_BARS = 45;
@@ -56,9 +57,36 @@ export default class SortingVisualizer extends Component {
     }
   }
 
-  quickSort() {}
-
-  heapSort() {}
+  quickSort() {
+    const animations = getQuickSortAnimations(this.state.array);
+    for (let i = 0; i < animations.length; i++) {
+      const arrayBars = document.getElementsByClassName("array-bar");
+      const isColorChange = i % 3 !== 2;
+      if (isColorChange) {
+        const [barOneIdx, barTwoIdx] = animations[i];
+        // console.log(barOneIdx, barTwoIdx);
+        const barOneStyle = arrayBars[barOneIdx].style;
+        const barTwoStyle = arrayBars[barTwoIdx].style;
+        const color = i % 3 === 0 ? SECONDARY_COLOR : PRIMARY_COLOR;
+        setTimeout(() => {
+          barOneStyle.backgroundColor = color;
+          barTwoStyle.backgroundColor = color;
+        }, i * ANIMATION_SPEED_IN_MS);
+      } else {
+        setTimeout(() => {
+          const [barOneIdx, barTwoIdx] = animations[i];
+          if (barTwoIdx !== -1 && barOneIdx !== -1) {
+            const barOneStyle = arrayBars[barOneIdx].style;
+            const barTwoStyle = arrayBars[barTwoIdx].style;
+            const barOneHeight = `${barOneStyle.height}`;
+            const barTwoHeight = `${barTwoStyle.height}`;
+            barTwoStyle.height = barOneHeight;
+            barOneStyle.height = barTwoHeight;
+          }
+        }, i * ANIMATION_SPEED_IN_MS);
+      }
+    }
+  }
 
   bubbleSort() {
     const animations = getBubbleSortAnimations(this.state.array);
