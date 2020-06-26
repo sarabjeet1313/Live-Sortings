@@ -7,7 +7,7 @@ import {
 } from "../sortingAlgorithms/sortingAlgorithms.js";
 import AboutModal from "./modal";
 import Footer from "../Nav_Footer/Footer";
-import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import { Navbar, Nav, NavDropdown, Button } from "react-bootstrap";
 
 const NUMBER_BARS = 64;
 const PRIMARY_COLOR = "black";
@@ -25,6 +25,7 @@ export default class SortingVisualizer extends Component {
       array: [],
       ANIMATION_SPEED_IN_MS: 75,
       show: false,
+      animation: "",
     };
   }
 
@@ -59,8 +60,16 @@ export default class SortingVisualizer extends Component {
     this.setState({ array });
   }
 
+  prepareMergeSort() {
+    const array = [...this.state.array];
+    this.setState({
+      animations: getMergeSortAnimations(array),
+      sort: "merge",
+    });
+  }
+
   mergeSort() {
-    const animations = getMergeSortAnimations(this.state.array);
+    const { animations } = this.state;
     for (let i = 0; i < animations.length; i++) {
       const arrayBars = document.getElementsByClassName("array-bar");
       const isColorChange = i % 3 !== 2;
@@ -83,8 +92,16 @@ export default class SortingVisualizer extends Component {
     }
   }
 
+  prepareQuickSort() {
+    const array = [...this.state.array];
+    this.setState({
+      animations: getQuickSortAnimations(array),
+      sort: "quick",
+    });
+  }
+
   quickSort() {
-    const animations = getQuickSortAnimations(this.state.array);
+    const { animations } = this.state;
     for (let i = 0; i < animations.length; i++) {
       const arrayBars = document.getElementsByClassName("array-bar");
       const isColorChange = i % 3 !== 2;
@@ -114,8 +131,16 @@ export default class SortingVisualizer extends Component {
     }
   }
 
+  prepareBubbleSort() {
+    const array = [...this.state.array];
+    this.setState({
+      animations: getBubbleSortAnimations(array),
+      sort: "bubble",
+    });
+  }
+
   bubbleSort() {
-    const animations = getBubbleSortAnimations(this.state.array);
+    const { animations } = this.state;
     for (let i = 0; i < animations.length; i++) {
       const arrayBars = document.getElementsByClassName("array-bar");
       const isColorChange = i % 3 !== 2;
@@ -142,30 +167,47 @@ export default class SortingVisualizer extends Component {
           }
         }, i * this.state.ANIMATION_SPEED_IN_MS);
       }
+    }
+  }
+
+  sort() {
+    switch (this.state.sort) {
+      case "bubble":
+        this.bubbleSort();
+        break;
+      case "quick":
+        this.quickSort();
+        break;
+      case "merge":
+        this.mergeSort();
+        break;
+      default:
+        break;
     }
   }
 
   render() {
+    console.log("Rendering visualizer");
     const { array } = this.state;
     let hideModalShow = () => {
       this.setState({ show: false });
     };
     return (
       <div>
-        <Navbar variant="dark" bg="dark" expand="lg" sticky="top">
+        <Navbar variant="dark" bg="primary" expand="lg" sticky="top">
           <Navbar.Brand href="/">Sorting-Visualizer</Navbar.Brand>
           <Nav className="ml-auto">
             <Nav.Link active href="/">
               Generate a new Array
             </Nav.Link>
             <NavDropdown title="Sorting Menu" id="nav-dropdown">
-              <NavDropdown.Item onClick={() => this.bubbleSort()}>
+              <NavDropdown.Item onClick={() => this.prepareBubbleSort()}>
                 Bubble Sort
               </NavDropdown.Item>
-              <NavDropdown.Item onClick={() => this.quickSort()}>
+              <NavDropdown.Item onClick={() => this.prepareQuickSort()}>
                 Quick Sort
               </NavDropdown.Item>
-              <NavDropdown.Item onClick={() => this.mergeSort()}>
+              <NavDropdown.Item onClick={() => this.prepareMergeSort()}>
                 Merge Sort
               </NavDropdown.Item>
             </NavDropdown>
@@ -198,6 +240,15 @@ export default class SortingVisualizer extends Component {
             ))}
           </div>
         </div>
+        <Button
+          variant="primary"
+          className="container"
+          size="lg"
+          block
+          onClick={() => this.sort()}
+        >
+          Sort
+        </Button>
         <Footer />
       </div>
     );

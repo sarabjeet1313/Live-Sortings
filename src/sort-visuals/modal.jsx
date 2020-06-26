@@ -17,7 +17,6 @@ class AboutModal extends Component {
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <h4>Centered Modal</h4>
             <p>
               A bar chart based Visualizer that can visualize the sorting
               algorithms for you. It has the capability to visualize the
