@@ -9,7 +9,7 @@ import AboutModal from "./modal";
 import Footer from "../Nav_Footer/Footer";
 import { Navbar, Nav, NavDropdown, Button } from "react-bootstrap";
 
-const NUMBER_BARS = 64;
+const NUMBER_BARS = 56;
 const PRIMARY_COLOR = "black";
 const SECONDARY_COLOR = "red";
 
@@ -197,7 +197,7 @@ export default class SortingVisualizer extends Component {
         <Navbar variant="dark" bg="primary" expand="lg" sticky="top">
           <Navbar.Brand href="/">Sorting-Visualizer</Navbar.Brand>
           <Nav className="ml-auto">
-            <Nav.Link active href="/">
+            <Nav.Link active href="/Live-Sortings">
               Generate a new Array
             </Nav.Link>
             <NavDropdown title="Sorting Menu" id="nav-dropdown">
