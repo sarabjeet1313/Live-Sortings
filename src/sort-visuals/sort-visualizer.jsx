@@ -195,7 +195,7 @@ export default class SortingVisualizer extends Component {
     return (
       <div>
         <Navbar variant="dark" bg="primary" expand="lg" sticky="top">
-          <Navbar.Brand href="/">Sorting-Visualizer</Navbar.Brand>
+          <Navbar.Brand href="/Live-Sortings">Sorting-Visualizer</Navbar.Brand>
           <Nav className="ml-auto">
             <Nav.Link active href="/Live-Sortings">
               Generate a new Array
