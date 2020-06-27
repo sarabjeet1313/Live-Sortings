@@ -8,7 +8,7 @@ class Footer extends Component {
         <footer class="page-footer font-small unique-color-dark pt-4">
           <div class="footer-copyright text-center py-3">
             © 2020 Copyright:
-            <a href="/"> Sorting-Visualizer</a>
+            <a href="/"> Live-Sortings</a>
           </div>
         </footer>
       </>
