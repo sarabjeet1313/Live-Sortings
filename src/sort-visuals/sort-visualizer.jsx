@@ -9,7 +9,7 @@ import AboutModal from "./modal";
 import Footer from "../Nav_Footer/Footer";
 import { Navbar, Nav, NavDropdown, Button } from "react-bootstrap";
 
-const NUMBER_BARS = 56;
+const NUMBER_BARS = 55;
 const PRIMARY_COLOR = "black";
 const SECONDARY_COLOR = "red";
 
@@ -20,12 +20,14 @@ export default class SortingVisualizer extends Component {
     this.updateSpeed_1 = this.updateSpeed_1.bind(this);
     this.updateSpeed_1_5 = this.updateSpeed_1_5.bind(this);
     this.updateSpeed_2 = this.updateSpeed_2.bind(this);
+    // this.handleChange = this.handleChange.bind(this);
 
     this.state = {
       array: [],
       ANIMATION_SPEED_IN_MS: 75,
       show: false,
       animation: "",
+      // noOfBars: "5",
     };
   }
 
@@ -186,18 +188,40 @@ export default class SortingVisualizer extends Component {
     }
   }
 
+  // TBD
+
+  // handleChange = (e) => {
+
+  //   this.setState(
+  //     {
+  //       noOfBars: e.target.value,
+  //     },
+  //     () => this.resetArray()
+  //   );
+  // };
+
   render() {
-    console.log("Rendering visualizer");
     const { array } = this.state;
     let hideModalShow = () => {
       this.setState({ show: false });
     };
     return (
       <div>
-        <Navbar variant="dark" bg="primary" expand="lg" sticky="top">
+        <Navbar variant="dark" bg="dark" expand="lg" sticky="top">
           <Navbar.Brand href="/Live-Sortings">Sorting-Visualizer</Navbar.Brand>
+
+          {/*TBD - how to change slider but not change state so that the running sort will not get affected*/}
+          {/* <label className="awidth">Array Bars</label>
+          <input
+            type="range"
+            class="custom-range"
+            min="0"
+            max="56"
+            id="range1"
+            onChange={this.handleChange}
+          ></input> */}
           <Nav className="ml-auto">
-            <Nav.Link active href="/Live-Sortings">
+            <Nav.Link className="lwidth" active href="/Live-Sortings">
               Generate a new Array
             </Nav.Link>
             <NavDropdown title="Sorting Menu" id="nav-dropdown">
@@ -229,16 +253,16 @@ export default class SortingVisualizer extends Component {
             <AboutModal show={this.state.show} onHide={hideModalShow} />
           </Nav>
         </Navbar>
-        <div className="array-container">
-          <div className="array-container-bars">
-            {array.map((value, idx) => (
-              <div
-                className="array-bar"
-                key={idx}
-                style={{ height: `${value}px` }}
-              ></div>
-            ))}
-          </div>
+        <div className="container">
+          {/* <div className="array-container-bars"> */}
+          {array.map((value, idx) => (
+            <div
+              className="array-bar"
+              key={idx}
+              style={{ height: `${value}px` }}
+            ></div>
+          ))}
+          {/* </div> */}
         </div>
         <Button
           variant="primary"
