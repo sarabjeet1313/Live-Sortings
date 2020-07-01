@@ -1,12 +1,3 @@
-.array-container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  margin-left: 100px;
-  top: 50%;
-  left: 50%;
-}
-
 .array-container-bars {
   position: fixed-bottom;
   display: flex;
@@ -16,7 +7,7 @@
   margin-bottom: 40px;
 }
 
-.container {
+.array-container {
   position: fixed-top;
   display: flex;
   flex-wrap: wrap-reverse;

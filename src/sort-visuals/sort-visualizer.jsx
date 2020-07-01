@@ -253,7 +253,7 @@ export default class SortingVisualizer extends Component {
             <AboutModal show={this.state.show} onHide={hideModalShow} />
           </Nav>
         </Navbar>
-        <div className="container">
+        <div className="array-container">
           {/* <div className="array-container-bars"> */}
           {array.map((value, idx) => (
             <div
@@ -264,7 +264,13 @@ export default class SortingVisualizer extends Component {
           ))}
           {/* </div> */}
         </div>
-        <Button variant="primary" size="lg" block onClick={() => this.sort()}>
+        <Button
+          className="container"
+          variant="primary"
+          size="lg"
+          block
+          onClick={() => this.sort()}
+        >
           Sort
         </Button>
         <Footer />
