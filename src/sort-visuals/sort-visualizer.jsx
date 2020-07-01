@@ -264,13 +264,7 @@ export default class SortingVisualizer extends Component {
           ))}
           {/* </div> */}
         </div>
-        <Button
-          variant="primary"
-          className="container"
-          size="lg"
-          block
-          onClick={() => this.sort()}
-        >
+        <Button variant="primary" size="lg" block onClick={() => this.sort()}>
           Sort
         </Button>
         <Footer />
