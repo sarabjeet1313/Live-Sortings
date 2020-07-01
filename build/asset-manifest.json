@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Live-Sortings/static/css/main.cd49ef8c.chunk.css",
+    "main.css": "/Live-Sortings/static/css/main.57cf4337.chunk.css",
     "main.js": "/Live-Sortings/static/js/main.c0b8bd6b.chunk.js",
     "main.js.map": "/Live-Sortings/static/js/main.c0b8bd6b.chunk.js.map",
     "runtime-main.js": "/Live-Sortings/static/js/runtime-main.9367b772.js",
@@ -9,17 +9,17 @@
     "static/js/2.5a29eed8.chunk.js": "/Live-Sortings/static/js/2.5a29eed8.chunk.js",
     "static/js/2.5a29eed8.chunk.js.map": "/Live-Sortings/static/js/2.5a29eed8.chunk.js.map",
     "index.html": "/Live-Sortings/index.html",
-    "precache-manifest.a0b52e314da6912c8251c69da0f463bd.js": "/Live-Sortings/precache-manifest.a0b52e314da6912c8251c69da0f463bd.js",
+    "precache-manifest.afd8e1a13e79d8b378b527d991158507.js": "/Live-Sortings/precache-manifest.afd8e1a13e79d8b378b527d991158507.js",
     "service-worker.js": "/Live-Sortings/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/Live-Sortings/static/css/2.af3c1da9.chunk.css.map",
-    "static/css/main.cd49ef8c.chunk.css.map": "/Live-Sortings/static/css/main.cd49ef8c.chunk.css.map",
+    "static/css/main.57cf4337.chunk.css.map": "/Live-Sortings/static/css/main.57cf4337.chunk.css.map",
     "static/js/2.5a29eed8.chunk.js.LICENSE.txt": "/Live-Sortings/static/js/2.5a29eed8.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.9367b772.js",
     "static/css/2.af3c1da9.chunk.css",
     "static/js/2.5a29eed8.chunk.js",
-    "static/css/main.cd49ef8c.chunk.css",
+    "static/css/main.57cf4337.chunk.css",
     "static/js/main.c0b8bd6b.chunk.js"
   ]
 }
