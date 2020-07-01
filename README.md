@@ -1,68 +1,51 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# [Affordly](https://web-assignment-2.herokuapp.com/)
 
-## Available Scripts
+One stop shop to buy and sell item.
 
-In the project directory, you can run:
+- Date Created: 04 JUN 2020
+- Last Modification Date: 14 JUN 2020
 
-### `npm start`
+## Table of Content
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [Author](#author)
+- [Introduction](#introduction)
+- [Features](#features)
+- [Deployment](#deployment)
+- [Built With](#built-with)
+- [Acknowledgments](#acknowledgments)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Author
 
-### `npm test`
+- _Sarabjeet Singh_ - (Developer/Maintainer)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Introduction
 
-### `npm run build`
+![Homepage](/demo/homepage-sorting.png)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Sorting Algorithms based Visualizer that can visualize the running algorithms for you. Currently, it supports following famous sorting algorithms : 1. Bubble Sort 2. Merge Sort 3. Quick Sort. In addition to it, the application has the capability of increasing the visualizing speed by 1.5x and 2.0x. Please help yourself and understand the sorting algorithms in a more engaging and entertaining way.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Please find below the necessary information about the code and the deployment.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Features
 
-### `npm run eject`
+1. Mutliple Algorithms Support
+2. Dynamic Speed Controls
+3. Cross-Browser Capability
+4. Responsive over all devices
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+![Demo](/demo/sorting-vid1.gif)
 
 ### Deployment
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+The application has been deployed to Githun pages with all the dependencies.There is a direct pipeline from Github repository to pages, I have pushed all my code to repository and Git built and deployed the project.
 
-### `npm run build` fails to minify
+To access the application, please check the link below:
+[Live-Sortings](https://sarabjeet1313.github.io/Live-Sortings/)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Built With
+
+While designing the Front-End, I have used some of the web frameworks and tools according to my needs.
+Some of the used ones are:
+
+- [React](https://reactjs.org/docs/getting-started.html) - Javascript library to build the front-end
+- [React-bootstrap](https://react-bootstrap.github.io/) - It is one of the oldest React libraries and available as a npm package to download.
