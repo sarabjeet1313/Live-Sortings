@@ -1,9 +1,8 @@
-# [Affordly](https://web-assignment-2.herokuapp.com/)
+# [Live-Sortings](https://sarabjeet1313.github.io/Live-Sortings/)
 
-One stop shop to buy and sell item.
+One shop to learn sortings in an entertaining way.
 
-- Date Created: 04 JUN 2020
-- Last Modification Date: 14 JUN 2020
+- Last Modification Date: 1 JUL 2020
 
 ## Table of Content
 
@@ -12,7 +11,6 @@ One stop shop to buy and sell item.
 - [Features](#features)
 - [Deployment](#deployment)
 - [Built With](#built-with)
-- [Acknowledgments](#acknowledgments)
 
 ## Author
 
@@ -22,7 +20,7 @@ One stop shop to buy and sell item.
 
 ![Homepage](/demo/homepage-sorting.png)
 
-Sorting Algorithms based Visualizer that can visualize the running algorithms for you. Currently, it supports following famous sorting algorithms : 1. Bubble Sort 2. Merge Sort 3. Quick Sort. In addition to it, the application has the capability of increasing the visualizing speed by 1.5x and 2.0x. Please help yourself and understand the sorting algorithms in a more engaging and entertaining way.
+Live-Sortings is a sorting algorithms based Visualizer that can visualize the running algorithms for you. Currently, it supports following famous sorting algorithms : 1. Bubble Sort 2. Merge Sort 3. Quick Sort. In addition to it, the application has the capability of increasing the visualizing speed by 1.5x and 2.0x. Please help yourself and understand the sorting algorithms in a more engaging and entertaining way. The project is inspired by an idea of Clément Mihailescu, which gave me the headstart for this visualizer.
 
 Please find below the necessary information about the code and the deployment.
 
