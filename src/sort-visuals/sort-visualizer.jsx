@@ -208,7 +208,7 @@ export default class SortingVisualizer extends Component {
     return (
       <div>
         <Navbar variant="dark" bg="dark" expand="lg" sticky="top">
-          <Navbar.Brand href="/Live-Sortings">Sorting-Visualizer</Navbar.Brand>
+          <Navbar.Brand href="/Live-Sortings">Live-Sortings</Navbar.Brand>
 
           {/*TBD - how to change slider but not change state so that the running sort will not get affected*/}
           {/* <label className="awidth">Array Bars</label>
